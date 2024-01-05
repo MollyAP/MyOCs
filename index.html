@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Your Website Title</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+  <div class="container">
+    <div class="intro-container">
+      <div class="intro-box" id="introBox">
+        <div class="author">
+          <img src="./Images/pfp.png">
+        </div>
+          <p style>
+            Hi, I'm Molly! The owner of all of these trolls and programmer behind the look and functionality of this
+            website. This is eventually meant to be a comprehensive ctalogue of all of my trolls and their stories so I
+            will try to keep this as up to date with the current lore as possible for people that would like to know
+            about them. <br><br>
+
+            Troll's that aren't mine but maintain relationships with them may get entries as well, though at some later
+            date but those entries will only be accessible through clicking on their names through the related character
+            of mine or possibly through a seperate "Extended Universe" section.<br><br>
+
+            Please keep in mind that since I coded this website myself, there might be occasional bugs or unintended
+            behaviors. If you'd like to report one or to just get in contact with me you can do so 
+            <a href="./contact.html">here</a>. I hope you enjoy my OC's :),<br><br>
+
+            Circle icons drawn by <a href="https://twitter.com/octolingles">
+              <img src="./Images/Assets/lina.png" class="lingles" id="linglesBounce" alt="Description of the image">
+            </a>
+          </p>
+        
+      </div>
+
+    </div>
+    <div class="character-info-container">
+      <div class="character-name-container">
+        <div id="characterName" class="character-name"></div>
+      </div>
+      <div id="characterList" class="character-list">
+        <!-- Character circles appear here -->
+      </div>
+    </div>
+    <div id="characterDetails" class="character-details" style="display: none;">
+      <!-- Character details appear here -->
+      <div class="character-image">
+        <img id="characterImage" src="" alt="Character Image">
+      </div>
+      <div id="etymology" class="bio-section"></div>
+      <div id="biography" class="bio-section"></div>
+      <div id="personality" class="bio-section"></div>
+      <div id="inventory" class="bio-section"></div>
+      <div id="relationships" class="bio-section"></div>
+      <div id="lusus" class="bio-section"></div>
+      <div id="imageGallery" class="image-gallery"></div>
+    </div>
+  </div>
+  <div id="imageModal" class="modal">
+    <div class="modal-header">
+      <span id="modalFileName" class="modal-file-name"></span>
+      <span id="modalCloseButton" class="modal-close">&times;</span>
+    </div>
+    <div class="modal-content-container">
+      <img id="modalImage" class="modal-content" onclick="window.open(this.src)">
+      <div id="modalInfo" class="image-info"></div>
+      <div id="modalArtist" class="modal-artist"></div>
+    </div>
+    <div id="modalNavigation" class="modal-navigation">
+      <button id="modalPrevButton"><i class="fas fa-chevron-left"></i></button>
+      <button id="modalNextButton"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <script src="./characters/Amares.js"></script>
+  <script src="./characters/Cabria.js"></script>
+  <script src="./characters/Vittra.js"></script>
+  <script src="./characters/Yercie.js"></script>
+  <script src="./characters/Weepan.js"></script>
+  <script src="./characters/Alcyon.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

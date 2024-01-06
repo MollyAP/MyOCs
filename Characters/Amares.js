@@ -36,10 +36,7 @@ const amares = {
   },
   gallery: [
     { path: 'Images/Ama1.png', info: 'One of her first references', artist: 'F1zh1e' },
-    { path: 'Images/Ama2.png', info: 'Info for Ama2', artist: 'Artist B' },
+    { path: 'Images/Ama2.png', info: 'Info for Ama2', artist: 'TBulgywulgy' },
     { path: 'Images/Ama3.png', info: 'Info for Ama3', artist: 'Artist C' }
   ]
 };
-
-// Set the innerHTML of the container to the formatted biography
-document.getElementById('etymology').innerHTML = amares.bio.etymology;

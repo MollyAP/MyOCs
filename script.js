@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleCharacterLeave() {
     if (!focusedCharacter) {
       characterName.textContent = '';
+      document.documentElement.style.removeProperty('--selection-color');
     } else {
       // Set character name to focused character's name when leaving the hovered character
       characterName.textContent = focusedCharacter.name;
@@ -151,11 +152,19 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('relationships').innerHTML = character.bio.relationships;
       document.getElementById('lusus').innerHTML = character.bio.lusus;
 
+        // Extract the selectionColor from the character object
+        const selectionColor = character.selectionColor || '#A282A2'; // Default to porphura purple if not specified
+
+        // Apply the ::selection style to the entire page
+        document.documentElement.style.setProperty('--selection-color', selectionColor);
+
       // Set background image and border color
-      document.body.style.backgroundImage = character.backgroundImage || 'none';
-      characterListContainer.style.borderColor = character.borderColor || '';
-      introBox.style.borderColor = character.borderColor || '';
-      updateScrollbarColors(character);
+      document.body.style.backgroundImage = character.backgroundImage || 'none'; // Sets custom background image
+      characterListContainer.style.borderColor = character.borderColor || ''; // Sets custom border color
+      introBox.style.borderColor = character.borderColor || ''; // Sets other custom border colors
+      updateScrollbarColors(character); // Sets custom scrollbar colors
+
+      // Sets styles based on infoboxColor
       const infobox = document.querySelector('.infobox');
       const infoboxImg = document.querySelector('.infobox img');
       const infoboxH2 = document.querySelector('.infobox h2');
@@ -183,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
       infoboxH2.style.color = '#0a0a0a';
       infoboxH2.style.padding = '5%';
 
+      // Select all <p> elements within the infobox
       const infoboxParagraphs = document.querySelectorAll('.infobox p');
 
       infoboxParagraphs.forEach(paragraph => {

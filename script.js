@@ -33,64 +33,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // Create character circles
-// Create character circles
-function createCharacterCircles() {
-  // Create the character container container
-  const characterContainerContainer = document.createElement('div');
-  characterContainerContainer.className = 'character-container-container';
+  // Create character circles
+  function createCharacterCircles() {
+    // Create the character container container
+    const characterContainerContainer = document.createElement('div');
+    characterContainerContainer.className = 'character-container-container';
 
-  characters.forEach((character, index) => {
-    // Create a container for each character circle
-    const characterContainer = document.createElement('div');
-    characterContainer.className = 'character-container';
+    characters.forEach((character, index) => {
+      // Create a container for each character circle
+      const characterContainer = document.createElement('div');
+      characterContainer.className = 'character-container';
 
-    // Set the size of those containers
-    characterContainer.style.width = '20%';
-    characterContainer.style.height = '30%';
+      // Set the size of those containers
+      characterContainer.style.width = '20%';
+      characterContainer.style.height = '30%';
 
-    // Add a new row after every 4 characters
-    if (index % 4 === 0 && index !== 0) {
-      characterContainer.style.clear = 'left';
-    }
+      // Add a new row after every 4 characters
+      if (index % 4 === 0 && index !== 0) {
+        characterContainer.style.clear = 'left';
+      }
 
-    const characterCircle = document.createElement('div');
-    characterCircle.className = 'character-circle';
-    characterCircle.style.borderColor = character.borderInitialColor;
+      const characterCircle = document.createElement('div');
+      characterCircle.className = 'character-circle';
+      characterCircle.style.borderColor = character.borderInitialColor;
 
-    // This makes the circle fill its container
-    const circleSize = '100%';
-    characterCircle.style.width = circleSize;
-    characterCircle.style.height = circleSize;
-    characterCircle.style.borderRadius = '50%';
-    characterCircle.style.overflow = 'hidden';
+      // This makes the circle fill its container
+      const circleSize = '100%';
+      characterCircle.style.width = circleSize;
+      characterCircle.style.height = circleSize;
+      characterCircle.style.borderRadius = '50%';
+      characterCircle.style.overflow = 'hidden';
 
-    // This sets the custom background images
-    characterCircle.style.backgroundImage = `url(${character.profileImg})`;
-    characterCircle.style.backgroundSize = 'cover';
-    characterCircle.style.backgroundPosition = 'center';
+      // This sets the custom background images
+      characterCircle.style.backgroundImage = `url(${character.profileImg})`;
+      characterCircle.style.backgroundSize = 'cover';
+      characterCircle.style.backgroundPosition = 'center';
 
-    // Event listeners for hover and leave
-    characterCircle.addEventListener('mouseenter', () => handleCharacterHover(character));
-    characterCircle.addEventListener('mouseleave', handleCharacterLeave);
+      // Event listeners for hover and leave
+      characterCircle.addEventListener('mouseenter', () => handleCharacterHover(character));
+      characterCircle.addEventListener('mouseleave', handleCharacterLeave);
 
-    characterCircle.addEventListener('click', () => handleCharacterClick(character, characterCircle));
+      characterCircle.addEventListener('click', () => handleCharacterClick(character, characterCircle));
 
-    // Append the character circle to its container
-    characterContainer.appendChild(characterCircle);
+      // Append the character circle to its container
+      characterContainer.appendChild(characterCircle);
 
-    // Append the character container to the character container container
-    characterContainerContainer.appendChild(characterContainer);
-  });
+      // Append the character container to the character container container
+      characterContainerContainer.appendChild(characterContainer);
+    });
 
-  // Append the character container container to the character list container
-  const characterListContainer = document.getElementById('characterList');
-  characterListContainer.appendChild(characterContainerContainer);
-}
+    // Append the character container container to the character list container
+    const characterListContainer = document.getElementById('characterList');
+    characterListContainer.appendChild(characterContainerContainer);
+  }
 
 
-   // Initialization
+  // Initialization
   function initialize() {
-   
+
     createCharacterCircles();
   }
 
@@ -165,11 +165,11 @@ function createCharacterCircles() {
       document.getElementById('relationships').innerHTML = character.bio.relationships;
       document.getElementById('lusus').innerHTML = character.bio.lusus;
 
-        // Extract the selectionColor from the character object
-        const selectionColor = character.selectionColor || '#A282A2'; // Default to porphura purple if not specified
+      // Extract the selectionColor from the character object
+      const selectionColor = character.selectionColor || '#A282A2'; // Default to porphura purple if not specified
 
-        // Apply the ::selection style to the entire page
-        document.documentElement.style.setProperty('--selection-color', selectionColor);
+      // Apply the ::selection style to the entire page
+      document.documentElement.style.setProperty('--selection-color', selectionColor);
 
       // Set background image and border color
       document.body.style.backgroundImage = character.backgroundImage || 'none'; // Sets custom background image

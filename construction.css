@@ -19,6 +19,7 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.8);
     }
+
     to {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
@@ -45,7 +46,7 @@ p {
 }
 
 .construction-content i {
-    color: #3498db; 
+    color: #3498db;
     font-size: 6.3vw;
     margin: 0 10px;
 }
@@ -63,4 +64,33 @@ button {
 
 button:hover {
     background-color: #4e404e;
+}
+
+
+@media (max-width: 768px) {
+
+    .construction-modal {
+        position: fixed;
+        height: 70%;
+        width: 95%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .construction-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 9vw;
+    }
+
+    .construction-content i {
+        font-size: 30vw;
+        margin-top: 4%;
+    }
 }

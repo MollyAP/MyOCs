@@ -24,7 +24,7 @@ function clickHandler() {
 
     // Redirect after animation completes
     setTimeout(() => {
-        window.location.href = './index.html';
+        window.location.href = './';
     }, hopDuration + fallDuration);
 
     // Remove the click event listener to prevent multiple clicks

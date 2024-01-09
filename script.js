@@ -30,55 +30,68 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Initialization
-  function initialize() {
-    createCharacterCircles();
-  }
+
 
   // Create character circles
-  function createCharacterCircles() {
-    characters.forEach((character, index) => {
-      // Create a container for each character circle
-      const characterContainer = document.createElement('div');
-      characterContainer.className = 'character-container';
+// Create character circles
+function createCharacterCircles() {
+  // Create the character container container
+  const characterContainerContainer = document.createElement('div');
+  characterContainerContainer.className = 'character-container-container';
 
-      // Set the size of those containers
-      characterContainer.style.width = '20%';
-      characterContainer.style.height = '30%';
+  characters.forEach((character, index) => {
+    // Create a container for each character circle
+    const characterContainer = document.createElement('div');
+    characterContainer.className = 'character-container';
 
-      // Add a new row after every 4 characters
-      if (index % 4 === 0 && index !== 0) {
-        characterContainer.style.clear = 'left';
-      }
+    // Set the size of those containers
+    characterContainer.style.width = '20%';
+    characterContainer.style.height = '30%';
 
-      const characterCircle = document.createElement('div');
-      characterCircle.className = 'character-circle';
-      characterCircle.style.borderColor = character.borderInitialColor;
+    // Add a new row after every 4 characters
+    if (index % 4 === 0 && index !== 0) {
+      characterContainer.style.clear = 'left';
+    }
 
-      // This makes the circle fill its container
-      const circleSize = '100%';
-      characterCircle.style.width = circleSize;
-      characterCircle.style.height = circleSize;
-      characterCircle.style.borderRadius = '50%';
-      characterCircle.style.overflow = 'hidden';
+    const characterCircle = document.createElement('div');
+    characterCircle.className = 'character-circle';
+    characterCircle.style.borderColor = character.borderInitialColor;
 
-      // This sets the custom background images
-      characterCircle.style.backgroundImage = `url(${character.profileImg})`;
-      characterCircle.style.backgroundSize = 'cover';
-      characterCircle.style.backgroundPosition = 'center';
+    // This makes the circle fill its container
+    const circleSize = '100%';
+    characterCircle.style.width = circleSize;
+    characterCircle.style.height = circleSize;
+    characterCircle.style.borderRadius = '50%';
+    characterCircle.style.overflow = 'hidden';
 
-      // Event listeners for hover and leave
-      characterCircle.addEventListener('mouseenter', () => handleCharacterHover(character));
-      characterCircle.addEventListener('mouseleave', handleCharacterLeave);
+    // This sets the custom background images
+    characterCircle.style.backgroundImage = `url(${character.profileImg})`;
+    characterCircle.style.backgroundSize = 'cover';
+    characterCircle.style.backgroundPosition = 'center';
 
-      characterCircle.addEventListener('click', () => handleCharacterClick(character, characterCircle));
+    // Event listeners for hover and leave
+    characterCircle.addEventListener('mouseenter', () => handleCharacterHover(character));
+    characterCircle.addEventListener('mouseleave', handleCharacterLeave);
 
-      // Append the character circle to its container
-      characterContainer.appendChild(characterCircle);
+    characterCircle.addEventListener('click', () => handleCharacterClick(character, characterCircle));
 
-      // Append that container to the character list container
-      characterListContainer.appendChild(characterContainer);
-    });
+    // Append the character circle to its container
+    characterContainer.appendChild(characterCircle);
+
+    // Append the character container to the character container container
+    characterContainerContainer.appendChild(characterContainer);
+  });
+
+  // Append the character container container to the character list container
+  const characterListContainer = document.getElementById('characterList');
+  characterListContainer.appendChild(characterContainerContainer);
+}
+
+
+   // Initialization
+  function initialize() {
+   
+    createCharacterCircles();
   }
 
   function handleCharacterHover(character) {

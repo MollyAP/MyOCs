@@ -7,6 +7,13 @@ body {
   color: #FFFFFF;
 }
 
+@font-face {
+  font-family: 'BatmanForeverAlternate';
+  src: url('../Fonts/Batman_Forever_Trollian_Title_Font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .container {
   display: flex;
   height: 100vh;
@@ -134,5 +141,128 @@ button:hover {
   #contactBox {
     width: 25vw; /* Set a fixed width */
       height: 30vw; /* Make it a square */
+  }
+}
+
+/* Media query for smaller screen computers */
+@media (max-width: 1366px) {
+  #contactBox {
+    width: 40vw; /* Set a fixed width */
+    height: 45vw; /* Make it a square */
+  }
+
+  form{
+    height: 100%;
+  }
+
+  label p {
+    margin-top: 10%;
+    align-items: center;
+    text-align: center;
+  }
+
+  input {
+    width: 100%;
+    height: 20%;
+  }
+
+.textarea {
+    width: 100%;
+    height: 10vw;
+  }
+  
+  .choose-file {
+    height: 20%;
+    margin-bottom: 0%;
+  }
+
+  textarea {
+    height: 100%; /* Adjust the height of the textarea */
+  }
+
+}
+
+@media (max-width: 768px) {
+  
+  #contactBox {
+    width: 90vw; /* Set a fixed width */
+    height: 60vh; /* Make it a square */
+    padding-top: 8%;
+  }
+
+  #contactTitle {
+    font-size: 10vw;
+    margin: 5vw;
+  }
+
+  form{
+    height: 100%;
+  }
+
+  label p {
+    margin-top: 8%;
+    align-items: center;
+    text-align: center;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    height: 20%;
+  }
+  
+  .choose-file {
+    height: 20%;
+  }
+
+  textarea {
+    height: 100%; /* Adjust the height of the textarea */
+  }
+  
+  button {
+    background-color: #A282A2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #896C89;
+  }
+  
+  /*home button*/
+  #tohome {
+    position: fixed;
+    bottom: 50px;
+    left: 10px;
+    color: white;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+    font-family: 'BatmanForeverAlternate';
+    font-size: 200%;
+  }
+  
+  #home-button {
+    position: fixed;
+    bottom: 20px;
+    left: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  #homebutton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 50px;
+    height: 54px;
+  }
+  
+  #home {
+    width: 50px;
+    height: 50px;
   }
 }

@@ -8,6 +8,12 @@
     <title>Molly's Trolls</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer">
+        <script>
+            if (window.location.pathname.endsWith('.html')) {
+                var cleanUrl = window.location.pathname.replace(/\.html$/, '');
+                window.history.replaceState({}, document.title, cleanUrl);
+            }
+        </script>
 </head>
 
 <body>
@@ -23,9 +29,9 @@
             </label>
             <label>
                 Your message:<br>
-                <textarea name="message"></textarea>
+                <textarea name="message" class="textarea"></textarea>
             </label>
-            <label>
+            <label class="choose-file">
                 Your file:<br>
                 <input type="file" name="upload">
             </label>

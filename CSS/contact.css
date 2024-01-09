@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('../Images/Backgrounds/background.png');
+  background-size: cover;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+#contactBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #A282A2;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 25vw; /* Set a fixed width */
+  height: 25vw; /* Make it a square */
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: auto; /* Use overflow to contain the content */
+}
+
+#contactTitle {
+  color: #FFFFFF;
+  font-family: 'BatmanForeverAlternate', sans-serif;
+  font-size: 6.3vw;
+  margin-bottom: 20px;
+  text-align: center; /* Center the text */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Make the form fill the container width */
+}
+label p {
+  color: #ffffff;
+  margin: 1px;
+}
+
+label {
+  color: #A282A2;
+  padding: 8px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%; /* Adjusted width */
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  height: 100%; /* Adjust the height of the textarea */
+}
+
+button {
+  background-color: #A282A2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #896C89;
+}
+
+/*home button*/
+#tohome {
+  position: fixed;
+  bottom: 50px;
+  left: 10px;
+  color: white;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+  font-family: 'BatmanForeverAlternate';
+  font-size: 200%;
+}
+
+#home-button {
+  position: fixed;
+  bottom: 20px;
+  left: 40px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#homebutton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  width: 50px;
+  height: 54px;
+}
+
+#home {
+  width: 50px;
+  height: 50px;
+}
+
+#home-button:hover #home {
+  transform: scale(1.2);
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1768px) {
+  #contactBox {
+    width: 25vw; /* Set a fixed width */
+      height: 30vw; /* Make it a square */
+  }
+}

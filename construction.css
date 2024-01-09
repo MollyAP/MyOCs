@@ -1,0 +1,66 @@
+/* construction.css */
+.construction-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0a0a0a;
+    border: solid 5px #826982;
+    border-radius: 15px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+    height: 70%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.construction-content {
+    padding: 2%;
+    text-align: center;
+    height: 95%;
+}
+
+h2 {
+    color: #f8f8ff;
+    margin-bottom: 2%;
+    font-family: 'BatmanForeverAlternate';
+    font-size: 4vw;
+}
+
+p {
+    color: #f8f8ff;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.construction-content i {
+    color: #3498db; 
+    font-size: 6.3vw;
+    margin: 0 10px;
+}
+
+button {
+    background-color: #826982;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4e404e;
+}

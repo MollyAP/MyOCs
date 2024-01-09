@@ -42,7 +42,11 @@
           <a href="./contact.html">here</a>. I hope you enjoy my OC's :),<br><br>
 
           Circle icons drawn by <a href="https://twitter.com/octolingles">
-            <img src="./Images/Assets/lina.png" class="lingles" id="linglesBounce" alt="Description of the image">
+            <img src="./Images/Assets/lina.png" class="lingles" id="linglesBounce" alt="Lina's name">
+          </a><br><br>
+
+          Author pic drawn by <a href="https://twitter.com/jojr0">
+            <img src="./Images/Assets/Jojr0.png" class="joj" id="jojsquish" alt="Jojro's name">
           </a>
         </p>
 
@@ -57,19 +61,39 @@
         <!-- Character circles appear here -->
       </div>
     </div>
+
     <div id="characterDetails" class="character-details" style="display: none;">
-      <!-- Character details appear here -->
-      <div class="character-image">
+      <div class="infobox">
+        <div class="topbox">
+          <h2 id="characterInfoName"></h2>
+        </div>
         <img id="characterImage" src="" alt="Character Image">
+
+        <p><strong>Title:</strong> <span id="characterTitle"></span></p>
+        <p><strong>Age:</strong> <span id="characterAge"></span></p>
+        <p><strong>Screen Name:</strong> <span id="characterScreenName"></span></p>
+        <p><strong>Typing Style:</strong> <span id="characterTypingStyle"></span></p>
+        <p><strong>Strife Specibi:</strong> <span id="characterStrifeSpecibi"></span></p>
+        <p><strong>Fetch Modus:</strong> <span id="characterFetchModus"></span></p>
+        <p><strong>Planet:</strong> <span id="characterPlanet"></span></p>
       </div>
+
       <div id="etymology" class="bio-section"></div>
       <div id="biography" class="bio-section"></div>
       <div id="personality" class="bio-section"></div>
       <div id="inventory" class="bio-section"></div>
       <div id="relationships" class="bio-section"></div>
       <div id="lusus" class="bio-section"></div>
-      <div id="imageGallery" class="image-gallery"></div>
+      <div class="image-gallery-container">
+        <button id="galleryPrevButton" class="image-gallery-arrow">&#9665;</button>
+        <div id="imageGallery" class="image-gallery">
+          <div id="imageGalleryScroll" class="image-gallery-scroll"></div>
+        </div>
+        <button id="galleryNextButton" class="image-gallery-arrow">&#9655;</button>
+      </div>
+
     </div>
+
   </div>
   <div id="imageModal" class="modal">
     <div class="modal-header">
@@ -87,12 +111,16 @@
     </div>
   </div>
 
+  <iframe id="constructionIframe" src="construction.html" frameborder="0" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 1000;"></iframe>
+  
   <script src="./Characters/Amares.js"></script>
   <script src="./Characters/Cabria.js"></script>
   <script src="./Characters/Vittra.js"></script>
   <script src="./Characters/Yercie.js"></script>
   <script src="./Characters/Weepan.js"></script>
   <script src="./Characters/Alcyon.js"></script>
+  <script src="construction.js"></script>
+
   <script src="./script.js"></script>
 </body>
 

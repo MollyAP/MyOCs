@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./CSS/contact.css">
     <title>Molly's Trolls</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -15,20 +15,31 @@
     <div id="contactBox">
         <form action="https://formspree.io/f/xnqeqpzb" method="POST" enctype="multipart/form-data">
             <label>
-                Your email:
+                <p>This is the best way for someone who doesn't know me to get in touch, you can expect me to get your
+                    message pretty instantly as I check my emails often</p><br><br>
+
+                Your email:<br>
                 <input type="email" name="email">
             </label>
             <label>
-                Your message:
+                Your message:<br>
                 <textarea name="message"></textarea>
             </label>
             <label>
-                Your file:
+                Your file:<br>
                 <input type="file" name="upload">
             </label>
             <button type="submit">Send</button>
         </form>
     </div>
+    <p id="tohome">HOME</p>
+    <div id="homebutton">
+        <div id="home-button">
+            <img id="home" src="./Images/Assets/home.png" alt="Home">
+        </div>
+    </div>
+
+    <script src="./JS/home.js"></script>
 </body>
 
 </html>

@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const introBox = document.getElementById('introBox');
   const characterName = document.getElementById('characterName');
   const characterDetails = document.getElementById('characterDetails');
-  const imageGalleryContainer = document.getElementById('imageGallery');
   const modal = document.getElementById('imageModal');
   const modalImage = document.getElementById('modalImage');
   const modalInfo = document.getElementById('modalInfo');
@@ -20,57 +19,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const characters = [amares, cabria, vittra, yercie, weepan, alcyon];
 
+  // Saves the initial content of introBox
+  const initialIntroBoxContent = introBox.innerHTML;
+
+  function clearImageGallery() {
+    const imageGallery = document.getElementById('imageGalleryScroll');
+
+    if (imageGallery) {
+      imageGallery.innerHTML = '';
+    }
+  }
+
   // Initialization
   function initialize() {
     createCharacterCircles();
   }
 
-// Create character circles
-function createCharacterCircles() {
-  characters.forEach((character, index) => {
-    // Create a container for each character circle
-    const characterContainer = document.createElement('div');
-    characterContainer.className = 'character-container';
+  // Create character circles
+  function createCharacterCircles() {
+    characters.forEach((character, index) => {
+      // Create a container for each character circle
+      const characterContainer = document.createElement('div');
+      characterContainer.className = 'character-container';
 
-    // Set the size of the character container
-    characterContainer.style.width = '20%';
-    characterContainer.style.height = '30%';
+      // Set the size of those containers
+      characterContainer.style.width = '20%';
+      characterContainer.style.height = '30%';
 
-    // Add a new row after every 4 characters
-    if (index % 4 === 0 && index !== 0) {
-      characterContainer.style.clear = 'left';
-    }
+      // Add a new row after every 4 characters
+      if (index % 4 === 0 && index !== 0) {
+        characterContainer.style.clear = 'left';
+      }
 
-    const characterCircle = document.createElement('div');
-    characterCircle.className = 'character-circle';
-    characterCircle.style.borderColor = character.borderInitialColor;
+      const characterCircle = document.createElement('div');
+      characterCircle.className = 'character-circle';
+      characterCircle.style.borderColor = character.borderInitialColor;
 
-    // This makes the circle fill its container
-    const circleSize = '100%'; 
-    characterCircle.style.width = circleSize;
-    characterCircle.style.height = circleSize;
-    characterCircle.style.borderRadius = '50%';
-    characterCircle.style.overflow = 'hidden';
+      // This makes the circle fill its container
+      const circleSize = '100%';
+      characterCircle.style.width = circleSize;
+      characterCircle.style.height = circleSize;
+      characterCircle.style.borderRadius = '50%';
+      characterCircle.style.overflow = 'hidden';
 
-    // This sets the custom background images
-    characterCircle.style.backgroundImage = `url(${character.profileImg})`;
-    characterCircle.style.backgroundSize = 'cover';
-    characterCircle.style.backgroundPosition = 'center';
+      // This sets the custom background images
+      characterCircle.style.backgroundImage = `url(${character.profileImg})`;
+      characterCircle.style.backgroundSize = 'cover';
+      characterCircle.style.backgroundPosition = 'center';
 
-    // Event listeners for hover and leave
-    characterCircle.addEventListener('mouseenter', () => handleCharacterHover(character));
-    characterCircle.addEventListener('mouseleave', handleCharacterLeave);
+      // Event listeners for hover and leave
+      characterCircle.addEventListener('mouseenter', () => handleCharacterHover(character));
+      characterCircle.addEventListener('mouseleave', handleCharacterLeave);
 
-    characterCircle.addEventListener('click', () => handleCharacterClick(character, characterCircle));
+      characterCircle.addEventListener('click', () => handleCharacterClick(character, characterCircle));
 
-    // Append the character circle to its container
-    characterContainer.appendChild(characterCircle);
+      // Append the character circle to its container
+      characterContainer.appendChild(characterCircle);
 
-    // Append that container to the character list container
-    characterListContainer.appendChild(characterContainer);
-  });
-}
-
+      // Append that container to the character list container
+      characterListContainer.appendChild(characterContainer);
+    });
+  }
 
   function handleCharacterHover(character) {
     if (focusedCharacter) {
@@ -84,7 +93,7 @@ function createCharacterCircles() {
     }
   }
 
-  // Handle character circle leave
+  // This handles character circle leave
   function handleCharacterLeave() {
     if (!focusedCharacter) {
       characterName.textContent = '';
@@ -97,36 +106,14 @@ function createCharacterCircles() {
   // Handle character circle click
   function handleCharacterClick(character, characterCircle) {
     if (characterCircle.classList.contains('focused')) {
-      characterCircle.classList.remove('focused'); // Unfocus the clicked character if it's already focused
+      characterCircle.classList.remove('focused');
       characterCircle.style.borderColor = character.borderInitialColor;
       focusedCharacter = null;
-      document.body.style.backgroundImage = 'url(\'Images/background.png\')'; // Reset background image
-      characterListContainer.style.borderColor = ''; // Reset border color
-      introBox.style.borderColor = ''; // Reset other border color
-      characterName.textContent = ''; // Clear character name when focused
-      introBox.innerHTML = `
-      <div class="author">
-      <img src="./Images/pfp.png">
-    </div>
-      <p style>
-        Hi, I'm Molly! The owner of all of these trolls and programmer behind the look and functionality of this
-        website. This is eventually meant to be a comprehensive ctalogue of all of my trolls and their stories so I
-        will try to keep this as up to date with the current lore as possible for people that would like to know
-        about them. <br><br>
-
-        Troll's that aren't mine but maintain relationships with them may get entries as well, though at some later
-        date but those entries will only be accessible through clicking on their names through the related character
-        of mine or possibly through a seperate "Extended Universe" section.<br><br>
-
-        Please keep in mind that since I coded this website myself, there might be occasional bugs or unintended
-        behaviors. If you'd like to report one or to just get in contact with me you can do so 
-        <a href="./contact.html">here</a>. I hope you enjoy my OC's :),<br><br>
-
-        Circle icons drawn by <a href="https://twitter.com/octolingles">
-          <img src="./Images/Assets/lina.png" class="lingles" id="linglesBounce" alt="Description of the image">
-        </a>
-      </p>
-      `;
+      document.body.style.backgroundImage = 'url(\'./Images/Backgrounds/background.png\')';
+      characterListContainer.style.borderColor = '';
+      introBox.style.borderColor = '';
+      characterName.textContent = '';
+      introBox.innerHTML = introBox.innerHTML = initialIntroBoxContent;
       characterDetails.style.display = 'none';
       clearImageGallery();
     } else {
@@ -148,6 +135,14 @@ function createCharacterCircles() {
       introBox.innerHTML = '';
       introBox.appendChild(characterDetails);
       characterDetails.style.display = 'block';
+      document.getElementById('characterInfoName').textContent = character.characterInfo.name;
+      document.getElementById('characterTitle').textContent = character.characterInfo.title;
+      document.getElementById('characterAge').textContent = character.characterInfo.age;
+      document.getElementById('characterScreenName').textContent = character.characterInfo.screenName;
+      document.getElementById('characterTypingStyle').textContent = character.characterInfo.typingStyle;
+      document.getElementById('characterStrifeSpecibi').textContent = character.characterInfo.strifeSpecibi;
+      document.getElementById('characterFetchModus').textContent = character.characterInfo.fetchModus;
+      document.getElementById('characterPlanet').textContent = character.characterInfo.planet;
       document.getElementById('characterImage').src = character.bioImg;
       document.getElementById('etymology').innerHTML = character.bio.etymology;
       document.getElementById('biography').innerHTML = character.bio.biography;
@@ -156,23 +151,57 @@ function createCharacterCircles() {
       document.getElementById('relationships').innerHTML = character.bio.relationships;
       document.getElementById('lusus').innerHTML = character.bio.lusus;
 
-      // Create and show the image gallery
-      createImageGallery(character);
-
       // Set background image and border color
-      document.body.style.backgroundImage = character.backgroundImage || 'none'; // Set custom background image
-      characterListContainer.style.borderColor = character.borderColor || ''; // Set custom border color
-      introBox.style.borderColor = character.borderColor || ''; // Set other custom border color
-      updateScrollbarColors(character); // Set custom scrollbar colors 
+      document.body.style.backgroundImage = character.backgroundImage || 'none';
+      characterListContainer.style.borderColor = character.borderColor || '';
+      introBox.style.borderColor = character.borderColor || '';
+      updateScrollbarColors(character);
+      const infobox = document.querySelector('.infobox');
+      const infoboxImg = document.querySelector('.infobox img');
+      const infoboxH2 = document.querySelector('.infobox h2');
+      const infoboxP = document.querySelector('.infobox p');
+      const topbox = document.querySelector('.topbox');
+
+      infobox.style.width = '80%';
+      infobox.style.margin = 'auto';
+      infobox.style.marginTop = '7%';
+      infobox.style.backgroundColor = '#0a0a0a';
+      infobox.style.borderRadius = '10px';
+      infobox.style.border = `solid 5px ${character.infoboxColor}`;
+      infobox.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+      infobox.style.overflow = 'hidden';
+
+      infoboxImg.style.width = '80%';
+      infoboxImg.style.borderRadius = '5px';
+      infoboxImg.style.margin = 'auto';
+      infoboxImg.style.marginTop = '8%';
+      infoboxImg.style.border = `solid 5px ${character.infoboxColor}`;
+
+      infoboxH2.style.fontSize = '200%';
+      infoboxH2.style.marginBottom = '10px';
+      infoboxH2.style.marginTop = '0%';
+      infoboxH2.style.color = '#0a0a0a';
+      infoboxH2.style.padding = '5%';
+
+      const infoboxParagraphs = document.querySelectorAll('.infobox p');
+
+      infoboxParagraphs.forEach(paragraph => {
+        paragraph.style.fontSize = '14px';
+        paragraph.style.marginLeft = '10% auto';
+        paragraph.style.color = character.infoboxColor;
+        paragraph.style.padding = '2% !important';
+      });
+
+      topbox.style.backgroundColor = character.infoboxColor;
 
     }
-    
+    // Initialize the gallery after the character is clicked
+    initializeGallery();
   }
 
-  // Update scrollbar colors based on character's properties
-function updateScrollbarColors(character) {
-  const style = document.createElement('style');
-  style.textContent = `
+  function updateScrollbarColors(character) {
+    const style = document.createElement('style');
+    style.textContent = `
     /* For Chrome, Edge, and Safari */
     ::-webkit-scrollbar {
       width: 15px;
@@ -217,17 +246,12 @@ function updateScrollbarColors(character) {
     }
   `;
 
-  document.head.appendChild(style);
-}
-
-  // Clear image gallery
-  function clearImageGallery() {
-    imageGalleryContainer.innerHTML = '';
-    currentImageIndex = 0;
+    document.head.appendChild(style);
   }
 
   // Modal handling
   function openModal(imagePath, imageData) {
+    modalImageIndex = focusedCharacter.gallery.findIndex(img => img.path === imagePath);
     modalImage.src = imagePath;
     modalInfo.innerHTML = imageData.info;
     modalArtist.innerHTML = `Artist: ${imageData.artist}`;
@@ -240,39 +264,97 @@ function updateScrollbarColors(character) {
     modal.style.display = 'none';
   }
 
-  // Gallery handling
-  function createImageGallery(character) {
-    clearImageGallery(); // Clear previous gallery if any
+  // Stores the current character
+  let currentCharacter = null;
+  let currentGalleryIndex = 0;
 
-    character.gallery.forEach((imageData, index) => {
-      const galleryImage = document.createElement('img');
-      galleryImage.src = imageData.path;
-      galleryImage.alt = `Image ${index + 1}`;
-
-      galleryImage.addEventListener('click', () => openModal(imageData.path, imageData));
-
-      imageGalleryContainer.appendChild(galleryImage);
-    });
+  // Creates an image element
+  function createImageElement(imagePath) {
+    const img = document.createElement('img');
+    img.src = imagePath;
+    img.alt = 'Character Gallery Image';
+    return img;
   }
 
-  // Navigation handling
+  // Gets the current index of the gallery
+  function getGalleryIndex(imageGallery) {
+    const images = Array.from(imageGallery.children);
+    const currentIndex = images.findIndex(img => img.classList.contains('active'));
+    return currentIndex === -1 ? 0 : currentIndex;
+  }
+
+  // Initializes the gallery
+  function initializeGallery() {
+    const prevButton = document.getElementById('galleryPrevButton');
+    const nextButton = document.getElementById('galleryNextButton');
+
+    if (prevButton && nextButton) {
+      prevButton.addEventListener('click', galleryPrevButton);
+      nextButton.addEventListener('click', galleryNextButton);
+    }
+
+    // Load the first set of images
+    updateGallery(0);
+  }
+
+  function updateGallery(startIndex) {
+    const imageGallery = document.getElementById('imageGalleryScroll');
+
+    if (imageGallery) {
+      imageGallery.innerHTML = '';
+
+      const currentCharacter = focusedCharacter;
+
+      if (currentCharacter && currentCharacter.gallery) {
+        for (let i = startIndex; i < startIndex + 3; i++) {
+          const index = i % currentCharacter.gallery.length;
+          const imageInfo = currentCharacter.gallery[index];
+          const imageElement = createImageElement(imageInfo.path);
+
+          imageElement.addEventListener('click', () => openModal(imageInfo.path, imageInfo));
+
+          imageGallery.appendChild(imageElement);
+        }
+      }
+    }
+  }
+
+  function galleryPrevButton() {
+    const currentCharacter = focusedCharacter;
+    if (currentCharacter) {
+      currentGalleryIndex = (currentGalleryIndex - 1 + currentCharacter.gallery.length) % currentCharacter.gallery.length;
+      updateGallery(currentGalleryIndex);
+    }
+  }
+
+  function galleryNextButton() {
+    const currentCharacter = focusedCharacter;
+    if (currentCharacter) {
+      currentGalleryIndex = (currentGalleryIndex + 1) % currentCharacter.gallery.length;
+      updateGallery(currentGalleryIndex);
+    }
+  }
+
+  // Modal Navigation handling
   function updateNavigationButtons() {
     modalNextButton.style.display = 'block';
     modalPrevButton.style.display = 'block';
   }
 
   function showNextImage() {
-    currentImageIndex = (currentImageIndex + 1) % focusedCharacter.gallery.length;
+    const currentCharacter = focusedCharacter;
+    modalImageIndex = (modalImageIndex + 1) % currentCharacter.gallery.length;
     updateModalImage();
   }
 
   function showPrevImage() {
-    currentImageIndex = (currentImageIndex - 1 + focusedCharacter.gallery.length) % focusedCharacter.gallery.length;
+    const currentCharacter = focusedCharacter;
+    modalImageIndex = (modalImageIndex - 1 + currentCharacter.gallery.length) % currentCharacter.gallery.length;
     updateModalImage();
   }
 
   function updateModalImage() {
-    const imageData = focusedCharacter.gallery[currentImageIndex];
+    const imageData = focusedCharacter.gallery[modalImageIndex];
     modalImage.src = imageData.path;
     modalInfo.innerHTML = imageData.info;
     modalArtist.innerHTML = `Artist: ${imageData.artist}`;
@@ -280,11 +362,12 @@ function updateScrollbarColors(character) {
     updateNavigationButtons();
   }
 
-  // Event listeners for navigation buttons
+  // Event listeners for modal navigation buttons
   modalNextButton.addEventListener('click', showNextImage);
   modalPrevButton.addEventListener('click', showPrevImage);
   modalCloseButton.addEventListener('click', closeModal);
 
   // Initialize the script
+  document.addEventListener('DOMContentLoaded', initializeGallery);
   initialize();
 });

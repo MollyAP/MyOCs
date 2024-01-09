@@ -494,11 +494,19 @@ body {
 
   .author-text {
     max-width: 100%;
-    font-size: 67%;
+    font-size: 68%;
     padding: 2%;
     text-align: left;
     box-sizing: border-box;
     margin-top: 0%;
+  }
+
+  .lingles {
+    height: 6vw;
+  }
+
+  .jojro {
+    height: 6vw;
   }
 
   .character-name {

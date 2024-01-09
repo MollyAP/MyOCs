@@ -58,11 +58,11 @@ body {
   }
 }
 
-.joj {
+.jojro {
   height: 1.10vw;
 }
 
-#jojsquish {
+#jojroSquish {
   animation-name: squish;
   animation-duration: 1s;
   animation-iteration-count: infinite;

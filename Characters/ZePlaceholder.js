@@ -70,22 +70,3 @@ const placeholderCharacter = {
         { path: `Images/Assets/Placeholder.png`, info: `Placeholder Info 3`, artist: `Placeholder Artist 3` }
     ]
 };
-
-// Gallery handling
-function createImageGallery(character) {
-    clearImageGallery(); // Clear previous gallery if any
-
-    character.gallery.forEach((imageData, index) => {
-      const galleryImage = document.createElement('img');
-      galleryImage.src = imageData.path;
-      galleryImage.alt = `Image ${index + 1}`;
-
-      galleryImage.addEventListener('click', () => openModal(imageData.path, imageData));
-
-      imageGalleryContainer.appendChild(galleryImage);
-      
-    });
-    
-  }
-
- 

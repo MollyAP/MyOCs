@@ -16,9 +16,9 @@ const weepan = {
     buttonColor: '#444400',
   },
   characterInfo: {
-    name: `Placeholder`,
+    name: `Weepan Strixs`,
     title: `Placeholder`,
-    age: `Placeholder`,
+    age: `11.08 sweeps`,
     screenName: `Placeholder`,
     typingStyle: `Placeholder`,
     strifeSpecibi: `Placeholder`,

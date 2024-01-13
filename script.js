@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let focusedCharacter = null;
   let currentImageIndex = 0;
 
-  const characters = [amares, cabria, vittra, yercie, weepan, alcyon];
+  const characters = [amares, cabria, vittra, yercie, weepan, alcyon, luzale];
 
   // Saves the initial content of introBox
   const initialIntroBoxContent = introBox.innerHTML;

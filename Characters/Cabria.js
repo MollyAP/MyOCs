@@ -18,7 +18,7 @@ const cabria = {
   characterInfo: {
     name: `Placeholder`,
     title: `Placeholder`,
-    age: `Placeholder`,
+    age: `10.62 sweeps`,
     screenName: `Placeholder`,
     typingStyle: `Placeholder`,
     strifeSpecibi: `Placeholder`,

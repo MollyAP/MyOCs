@@ -18,7 +18,7 @@ const vittra = {
   characterInfo: {
     name: `Placeholder`,
     title: `Placeholder`,
-    age: `Placeholder`,
+    age: `8.31 sweeps`,
     screenName: `Placeholder`,
     typingStyle: `Placeholder`,
     strifeSpecibi: `Placeholder`,

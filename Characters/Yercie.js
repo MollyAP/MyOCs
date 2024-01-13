@@ -16,9 +16,9 @@ const yercie = {
     buttonColor: '#2E0000',
   },
   characterInfo: {
-    name: `Placeholder`,
+    name: `Yercie Vennun`,
     title: `Placeholder`,
-    age: `Placeholder`,
+    age: `8.31 sweeps`,
     screenName: `Placeholder`,
     typingStyle: `Placeholder`,
     strifeSpecibi: `Placeholder`,

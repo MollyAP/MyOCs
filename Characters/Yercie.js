@@ -43,7 +43,11 @@ const yercie = {
       biography: 
       `<h1>Bio</h1>
       <p>
-      Placeholder Biography
+      An aspiring witch currently training under Cabría, having discovered her through her lusus. She found Cabría trying to obtain her lusii's venom and helped her leading to Cabría taking her in as a student. Now Yercie is fulfilling her dream of belonging somewhere under Cabrías guidance.<br><br>
+
+      Despite living in the forest like other witches, she hasn't been quite able to live as independently as them until she met Cabría. She now barely goes into the nearby city to work, deciding to reduce her hours to dedicate more time to be with Cabría and La Brujota, her newfound family. Being mentored by Cabría, Yercie often follows her around, absorbing wisdom, carrying out tasks for her, and doing pretty much anything she asks of her. But when she isn't doing that she's a trash collector, picking litter up off the streets<br><br>
+
+      Yercie truly does love her new family and  has a deep appreciation for the company and care they have for her and she would do whatever they ask, which is why Cabría thought she was a perfect student for her. Although her teacher imparts wisdom of harmful plants and destructive witchery Yercie secretly has taken an interest in  helpful plants as well. she sees garbage every day and she's seen many animals suffer and slowly die from her lusus' venom so she wants to see beauty and healing for a change she secretly grows them in secret in a private garden.
       </p>`,
       personality: 
       `<h1>Personality</h1>

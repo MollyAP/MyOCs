@@ -43,7 +43,11 @@ const amares = {
     biography:
       `<h1>Bio</h1>
     <p>
-    Amares is a chill, down-to-earth girl with a passion for the occult and the ability to predict the future through communing with spirits. She's a lover not a fighter and this is obvious given that she prefers using her powers only to keep herself out of harm's way or playfully messing with people, but recently she's had to use them to fight. Despite her mischievous streak and vanity, she's generally caring and gets along with most people thanks to her easy-going nature. Though at the bottom of the cast system of her planet Amares is seen very highly in the underground world of witches on account of her being the direct descendant of the most legendary witch to ever walk the planet, simply known as "La Brujota"
+    A chill and down-to-earth stoner with the unique ability to communicate with spirits. Trained in witchery under La Brujota, Amares' youth was marked by mischief and nefarious exploits, often alongside her "sister" Cabría. While she is generally a nice and caring person, her past behavior as a little shit occasionally resurfaces, in little mischievous streaks.  Overall Amares is a sweet yet tough love preaching troll, unafraid to speak her mind without sugarcoating.<br><br>
+
+    Despite being at the bottom of the cast system of her planet, Amares is highly regarded in the underground world of witches. This is due to her being the direct descendant of the legendary witch known as "La Brujota." Amares prefers using her powers to keep herself out of harm's way or playfully messing with people, she has a broad knowledge of various forms of magic though her passion lies in natural medicines, potions, and soothsaying.<br><br>
+
+    At her current age, Amares remains uninterested in settling down, maintaining a love for the wild and seeking connections with various partners. This desire for freedom creates tension with other trolls in her life, such as Cabría and Strixs, who each harbor their own feelings and desires for her. 
     </p>`,
     personality: 
     `<h1>Personality</h1>

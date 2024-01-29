@@ -43,7 +43,17 @@ const weepan = {
       biography: 
       `<h1 style="color: #d11d05;">Bio</h1>
       <p style="color: #d11d05;">
-      Placeholder Biography
+      
+  Strixs, formerly known as Weepan, discovered her true identity as the drummer and vocalist of a semi-popular lowblood punk metal band at a young age. Choosing to use her surname "Strixs" as her stage name due to how dorky she believes her first name to be, she crafted a public image of the  "moody emo goldy"  through her wild performances, using her drumsticks to reference of s/h on social media, her foul language etc.  Strixs' shows are characterized by intense screaming, sometimes moshing with her fans, and pounding on her drums to the point of breaking her drumsticks. In fact in her downtime, she uses her psionic powers to carve new drumsticks, so that she always has backups when she inevitably needs them. She drums with two sets of drumsticks, one in each hand, and two suspended in the air with her mind a subtle flex of her skill in both music and psionics.<br><br>
+
+  Strixs has known her bandmates pretty much since they were hatched all getting into music together  initially as a hobby but along the way it became a way to express their emotions, eventually becoming a band, named "The Wailers" on account of Strixs style of singing... Screaming incomprehensibly into the mic. This high energy and violent style became widely popular amongst lowbloods, launching The Wailers into a niche stardom.<br><br>
+
+  Strixs' life took a drastic turn when she crossed paths with Amares during a pee brake during a concert, an event leading to a passionate fling in the bathroom after which Amares decided to become a groupie joining her on tour until she got bored and unexpectedly left without a word, leaving Strixs devastated as she thought she had become her first matesprit. Struggling to keep it together on stage her band had to cancel the rest of the tour. While she has since managed to resume shows she still grapples with the emotional aftermath behind closed doors... Completely unbeknownst to Amares. She had always used music as an outlet for anger, but finds her style a challenging medium for expressing the depth of the sadness that engulfs her.
+
+
+
+
+
       </p>`,
       personality: 
       `<h1 style="color: #d11d05;">Personality</h1>

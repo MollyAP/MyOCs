@@ -13,11 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalCloseButton = document.getElementById('modalCloseButton');
   const modalNextButton = document.getElementById('modalNextButton');
   const modalPrevButton = document.getElementById('modalPrevButton');
+  const authorContainer = document.querySelector('.author-container');
+  const authorText = document.querySelector('.author-text');
+  const authorImage = document.querySelector('.author img');
 
   let focusedCharacter = null;
   let currentImageIndex = 0;
 
-  const characters = [amares, cabria, vittra, yercie, weepan, alcyon, luzale];
+  const characters = [amares, cabria, vittra, yercie, marron, weepan, alcyon, myrdin, luzale];
 
   // Saves the initial content of introBox
   const initialIntroBoxContent = introBox.innerHTML;
@@ -31,8 +34,33 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+  // Function to resize elements
+  function resizeElements() {
+    const introBoxWidth = introBox.clientWidth;
+    const introBoxHeight = introBox.clientHeight;
 
-  // Create character circles
+    // Set minimum and maximum font sizes
+    const minFontSize = 1; // Minimum font size in pixels
+    const maxFontSize = 16; // Maximum font size in pixels
+
+    // Calculate font size based on the available height
+    const fontSize = (introBoxHeight / 900) * maxFontSize;
+
+    // Ensure the font size is within the specified range
+    authorText.style.fontSize = `${Math.max(minFontSize, Math.min(maxFontSize, fontSize))}px`;
+
+    // Adjust image size based on both width and height
+    const imageSize = Math.min(introBoxWidth, introBoxHeight) * 0.8;
+    authorImage.style.maxWidth = `${imageSize}px`;
+    authorImage.style.maxHeight = `${introBoxHeight / 2.3}px`;
+  }
+
+  // Initial resize on page load
+  resizeElements();
+
+  // Resize elements on window resize
+  window.addEventListener('resize', resizeElements);
+
   // Create character circles
   function createCharacterCircles() {
     // Create the character container container
@@ -86,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const characterListContainer = document.getElementById('characterList');
     characterListContainer.appendChild(characterContainerContainer);
   }
+
 
 
   // Initialization

@@ -43,7 +43,11 @@ const vittra = {
       biography: 
       `<h1>Bio</h1>
       <p>
-      Placeholder Biography
+      An aspiring witch currently training under Amares, having discovered her through Twitter she found  Amares' tutorials on living off the land very useful in her own survival while growing up in the forest. Her admiration wasn't solely based on survival skills though as she also just thought Amares' was really really hot and enjoyed her gaming streams and cosplay. Although she quickly determined that they both lived in the same forest, Vittra never went out looking for Amares to avoid any potential stalkerish behavior. However, one day, she brought it up in response to one of her Twitter posts and to her shock, Amares suggested they meet. Now Vittra is fulfilling her dream of becoming a witch under Amares' guidance.<br><br>
+
+Despite living in the forest like other witches and being a self proclaimed environmentalist, she hasn't been quite able to live as independently as them. She frequently goes into the nearby city to work, as it's the only way to afford the modern conveniences she enjoys.  Since she has to work for a living when she isn't skateboarding with friends, taking care of all the lovely plants in her garden, or furthering her knowledge under Amares she's a security guard for a company that specializes in employing many expendable lowbloods.<br><br>
+
+Vittra truly does love nature and  has a deep appreciation for plants and gardening, which is why she thought herself a perfect student for Amares. Although her teacher imparts wisdom of healing plants and responsible witchery Vittra secretly has taken an interest in harmful plants as well. In her private garden, hidden from prying eyes, she dedicates time to researching and caring for these sharp, carnivorous, or poisonous flora. 
       </p>`,
       personality: 
       `<h1>Personality</h1>
